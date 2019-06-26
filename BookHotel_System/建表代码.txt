@@ -1,0 +1,41 @@
+create table Room(  	--房间信息表
+Room_no varchar(10) not null,	--房间号
+Room_status varchar(10),	--房间入住状态
+Room_guest varchar(25),	--房间住客
+Room_cleaner varchar(25),--房间清洁人员
+);
+
+create table GuestMessage(	--顾客信息表
+Guest_username varchar(20),	--顾客账号
+Guest_password varchar(20),	--顾客密码
+Guest_name varchar(25),		--顾客姓名
+Guest_sex varchar(5),		--顾客性别
+Guest_mobilephone varchar(20),	--顾客手机号
+Guest_IDCardNo varchar(25),	--顾客身份证号
+Guest_BookedRoom varchar(10),	--顾客预订房间号
+);
+
+create table ManagerMessage(	--管理者信息表
+Manager_username varchar(20),	--管理者账号
+Manager_password varchar(20),	--管理者密码
+Manager_name varchar(25),	--管理者姓名
+Manager_sex varchar(5),		--管理者性别
+Manager_mobilephone varchar(20),--管理者手机号
+);
+
+create table CleanerMessage(	--清洁工信息表
+Cleaner_name varchar(25),	--清洁工姓名
+Cleaner_sex varchar(5),		--清洁工性别
+Cleaner_BookedRoom varchar(10),	--清洁工负责房间号
+);
+
+create table ApplysubscribeRoom(  //订房请求(中间表)
+no varchar(10),         --房间号
+username varchar(20),   --用户名
+name varchar(25));      --姓名
+
+
+create table ApplyUnsubscribeRoom(  //退房请求(中间表)
+no varchar(10),         --房间号
+username varchar(20),   --用户名
+name varchar(25));      --姓名
